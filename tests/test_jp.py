@@ -19,7 +19,7 @@ class TestLength(unittest.TestCase):
 
 class TestUnicodeNormalize(unittest.TestCase):
     def setUp(self):
-        self.preprocessesor = JpTokenPreprocessing(number=True, case='lower', unicode='NFKC', min_len=2)
+        self.preprocessesor = JpTokenPreprocessing(number=True, case='lower', str='NFKC', min_len=2)
 
     def test_alphabet_num(self):
         token = ['１２３', 'ＡＢＣ', 'ＡＢ１']

@@ -11,7 +11,7 @@ def tokenize(text):
         if '名詞' in node.feature:
             surface = node.surface
             yield surface
-        node = node.next
+        node = node.__next__
 
 if __name__=='__main__':
     text = """
@@ -39,7 +39,7 @@ if __name__=='__main__':
     preprocessor = JpTokenPreprocessing(number=False,
                                         symbol=False,
                                         case='lower',
-                                        unicode='NFKC',
+                                        str='NFKC',
                                         min_len=2,
                                         stopwords=stopwords)
     tokens = preprocessor.preprocessing(tokens)

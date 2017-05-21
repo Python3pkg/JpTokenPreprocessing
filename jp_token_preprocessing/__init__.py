@@ -26,12 +26,12 @@ class JpTokenPreprocessing(object):
 
     トークナイズされた日本語の前処理
     """
-    def __init__(self, number=False, symbol=False, case='lower', unicode='NFKC', min_len=2, stopwords=[]):
+    def __init__(self, number=False, symbol=False, case='lower', str='NFKC', min_len=2, stopwords=[]):
         """初期化"""
         self.number = number
         self.symbol = symbol
         self.case = case
-        self.unicode_normalize = unicode
+        self.unicode_normalize = str
         self.min_len = min_len
         self.stopwords = stopwords
         self.re_symbol = re.compile('^\W+$')
